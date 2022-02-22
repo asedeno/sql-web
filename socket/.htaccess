@@ -1,0 +1,6 @@
+Header add Content-Security-Policy "default-src 'self'; object-src 'none'"
+Header add X-XSS-Protection "1; mode=block"
+Header add X-Frame-Options "deny"
+Header add X-Content-Options "nosniff"
+
+ErrorDocument 404 /socket/
