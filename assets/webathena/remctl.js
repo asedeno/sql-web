@@ -66,7 +66,7 @@ function RemctlSocket(proxy, host, port) {
     // How far we are into the buffer.
     this.bufferPos = 0;
 
-    this.socket = new SockJS(proxy);
+    this.socket = new WebSocket(proxy);
     this.socket.addEventListener('open', function() {
         this.socket.send(JSON.stringify({
             type: 'init',
